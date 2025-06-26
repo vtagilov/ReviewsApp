@@ -49,7 +49,8 @@ private extension ReviewsViewModel {
         do {
             let data = try result.get()
             let reviews = try decoder.decode(Reviews.self, from: data)
-            state.items += reviews.items.map(makeReviewItem)
+            state.reviewItems += reviews.items.map(makeReviewItem)
+            state.reviewsCountItem = makeReviewsCountItem(state.reviewItems.count)
             state.offset += state.limit
             state.shouldLoad = state.offset < reviews.count
         } catch {
@@ -66,7 +67,7 @@ private extension ReviewsViewModel {
             var item = state.items[index] as? ReviewItem
         else { return }
         item.maxLines = .zero
-        state.items[index] = item
+        state.reviewItems[index] = item
         onStateChange?(state)
     }
 
@@ -77,6 +78,7 @@ private extension ReviewsViewModel {
 private extension ReviewsViewModel {
 
     typealias ReviewItem = ReviewCellConfig
+    typealias ReviewsCountItem = ReviewsCountCellConfig
 
     func makeReviewItem(_ review: Review) -> ReviewItem {
         let nameText = "\(review.first_name) \(review.last_name)".attributed(font: .username)
@@ -91,6 +93,11 @@ private extension ReviewsViewModel {
             ratingRenderer: ratingRenderer
         )
         return item
+    }
+    
+    func makeReviewsCountItem(_ reviewsCount: Int) -> ReviewsCountItem {
+        let countText = reviewsCount.reviewsCountString.attributed(font: .reviewCount, color: .reviewCount)
+        return ReviewsCountItem(countText: countText)
     }
 
 }

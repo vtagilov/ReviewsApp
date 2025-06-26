@@ -99,8 +99,6 @@ final class ReviewCell: UITableViewCell {
     fileprivate let createdDateLabel = UILabel()
     fileprivate let showMoreButton = UIButton()
     
-    
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

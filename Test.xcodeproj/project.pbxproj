@@ -27,6 +27,8 @@
 		21ED1F602D69C85E0012D6F6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED1F5F2D69C85E0012D6F6 /* RootViewController.swift */; };
 		21ED1F622D69CBCD0012D6F6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED1F612D69CBCD0012D6F6 /* RootView.swift */; };
 		21ED1F652D69D0340012D6F6 /* ReviewsScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED1F642D69D0340012D6F6 /* ReviewsScreenFactory.swift */; };
+		E76778172E0D2C9A00701DE1 /* ReviewsCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76778162E0D2C9A00701DE1 /* ReviewsCountCell.swift */; };
+		E79CDB172E0EB5C000DBC7FF /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79CDB162E0EB5BB00DBC7FF /* Int+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		21ED1F5F2D69C85E0012D6F6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		21ED1F612D69CBCD0012D6F6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		21ED1F642D69D0340012D6F6 /* ReviewsScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsScreenFactory.swift; sourceTree = "<group>"; };
+		E76778162E0D2C9A00701DE1 /* ReviewsCountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCountCell.swift; sourceTree = "<group>"; };
+		E79CDB162E0EB5BB00DBC7FF /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				21B82E252D47B0640085DAA2 /* ReviewCell.swift */,
+				E76778162E0D2C9A00701DE1 /* ReviewsCountCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 		21B82E222D47B0640085DAA2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E79CDB162E0EB5BB00DBC7FF /* Int+Ext.swift */,
 				21B8416E2D47C4C60085DAA2 /* String+Ext.swift */,
 				216668702D48E4B2009AAA76 /* NSAttributedString+Ext.swift */,
 			);
@@ -267,6 +273,7 @@
 				21667B802D4A25B2009AAA76 /* RatingRenderer.swift in Sources */,
 				216668712D48E4B2009AAA76 /* NSAttributedString+Ext.swift in Sources */,
 				21B82E362D47B0D80085DAA2 /* ReviewsProvider.swift in Sources */,
+				E76778172E0D2C9A00701DE1 /* ReviewsCountCell.swift in Sources */,
 				21ED1F602D69C85E0012D6F6 /* RootViewController.swift in Sources */,
 				21B82E342D47B0AA0085DAA2 /* ReviewsViewModel.swift in Sources */,
 				21B8416B2D47BFA10085DAA2 /* Reviews.swift in Sources */,
@@ -274,6 +281,7 @@
 				2166A0F42D4A5B25009AAA76 /* ReviewsView.swift in Sources */,
 				216668732D48E89A009AAA76 /* Colors.swift in Sources */,
 				21B841712D47C5F00085DAA2 /* TableCellConfig.swift in Sources */,
+				E79CDB172E0EB5C000DBC7FF /* Int+Ext.swift in Sources */,
 				21ED1F652D69D0340012D6F6 /* ReviewsScreenFactory.swift in Sources */,
 				2166686F2D48E23F009AAA76 /* Fonts.swift in Sources */,
 				21B82E312D47B0640085DAA2 /* AppDelegate.swift in Sources */,
