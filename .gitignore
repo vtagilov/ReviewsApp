@@ -1,0 +1,12 @@
+# Xcode
+xcuserdata/
+DerivedData/
+*.xccheckout
+*.xcuserstate
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
