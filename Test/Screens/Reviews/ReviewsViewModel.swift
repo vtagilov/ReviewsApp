@@ -37,6 +37,17 @@ extension ReviewsViewModel {
         state.shouldLoad = false
         reviewsProvider.getReviews(offset: state.offset, completion: gotReviews)
     }
+    
+    /// Метод, вызываемый refreshControl.
+    func refreshReviews(completion: @escaping () -> Void) {
+        state.isAllItemsLoaded = false
+        state.reviewItems = []
+        state.shouldLoad = true
+        state.offset = 0
+        
+        getReviews()
+        completion()
+    }
 
 }
 

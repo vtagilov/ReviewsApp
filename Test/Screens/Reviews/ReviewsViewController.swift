@@ -35,6 +35,11 @@ private extension ReviewsViewController {
         let reviewsView = ReviewsView()
         reviewsView.tableView.delegate = viewModel
         reviewsView.tableView.dataSource = viewModel
+        reviewsView.refreshControlAction = { [weak self] in
+            self?.viewModel.refreshReviews(completion: {
+                reviewsView.refreshControl.endRefreshing()
+            })
+        }
         return reviewsView
     }
 
