@@ -84,12 +84,16 @@ private extension ReviewsViewModel {
         let nameText = "\(review.first_name) \(review.last_name)".attributed(font: .username)
         let reviewText = review.text.attributed(font: .text)
         let createdDateText = review.createdDateText.attributed(font: .created, color: .created)
+        let onShowMoreTapped: (UUID) -> Void = { [weak self] UUID in
+            guard let sSelf = self else { return }
+            sSelf.showMoreReview(with: UUID)
+        }
         let item = ReviewItem(
             nameText: nameText,
             rating: review.rating,
             reviewText: reviewText,
             createdDateText: createdDateText,
-            onShowMoreTapped: showMoreReview,
+            onShowMoreTapped: onShowMoreTapped,
             ratingRenderer: ratingRenderer
         )
         return item
