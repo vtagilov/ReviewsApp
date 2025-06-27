@@ -155,12 +155,19 @@ private extension ReviewCell {
 
     func setupShowMoreButton() {
         contentView.addSubview(showMoreButton)
+        showMoreButton.addTarget(self, action: #selector(onShowMoreTapped), for: .touchUpInside)
         showMoreButton.contentVerticalAlignment = .fill
         showMoreButton.setAttributedTitle(Config.showMoreText, for: .normal)
     }
     
     func setupCreatedDateLabel() {
         contentView.addSubview(createdDateLabel)
+    }
+    
+    @objc func onShowMoreTapped() {
+        if let config {
+            config.onShowMoreTapped(config.id)
+        }
     }
 }
 
