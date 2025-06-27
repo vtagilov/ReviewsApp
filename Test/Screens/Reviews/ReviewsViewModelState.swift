@@ -3,11 +3,12 @@ struct ReviewsViewModelState {
 
     var reviewItems = [any TableCellConfig]()
     var reviewsCountItem = ReviewsCountCellConfig()
-    var limit = 20
+    var limit = 21
     var offset = 0
     var shouldLoad = true
+    var isAllItemsLoaded = false
     
     var items: [any TableCellConfig] {
-        reviewItems + [reviewsCountItem]
+        isAllItemsLoaded ? reviewItems + [reviewsCountItem] : reviewItems
     }
 }
