@@ -6,49 +6,80 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "createdDateText": "1 час назад"
+            "createdDateText": "1 час назад",
+            "avatar_url": "https://sun1-87.userapi.com/s/v1/if1/estIPOVPyV8Vc7arQMWKh4-wQ0-jipOt-e090XqQj_bNPephYBO3GtXCrgCN2hrzes46N9If.jpg?size=400x400&quality=96&crop=0,0,400,400&ava=1",
+            "photo_urls": []
         },
         {
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
             "text": "Скользские ужасно.",
-            "createdDateText": "12 минут назад"
+            "createdDateText": "12 минут назад",
+            "photo_urls": [
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
             "text": "Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "createdDateText": "35 минут назад"
+            "createdDateText": "35 минут назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": []
         },
         {
             "first_name": "Илья",
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "createdDateText": "минуту назад"
+            "createdDateText": "минуту назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7Pt1J1tUjnOdLh0frkzREY5GcBSHLoOGHg&s",
+                "https://static.ecco.ru/images/eshop/img/jpg/225x225/091504_01303.jpg?v=1",
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "createdDateText": "только что"
+            "createdDateText": "только что",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7Pt1J1tUjnOdLh0frkzREY5GcBSHLoOGHg&s",
+                "https://static.ecco.ru/images/eshop/img/jpg/225x225/091504_01303.jpg?v=1",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Олег",
             "last_name": "Николаев",
             "rating": 1,
             "text": "Ребёнок жалуется, что очень скользские. Пока шла до школы...",
-            "createdDateText": "15 минут назад"
+            "createdDateText": "15 минут назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
             "text": "",
-            "createdDateText": "вчера в 12:39"
+            "createdDateText": "вчера в 12:39",
+            "photo_urls": [
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
 
 
@@ -57,49 +88,80 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "createdDateText": "1 час назад"
+            "createdDateText": "1 час назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": []
         },
         {
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
             "text": "Скользские ужасно.",
-            "createdDateText": "12 минут назад"
+            "createdDateText": "12 минут назад",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7Pt1J1tUjnOdLh0frkzREY5GcBSHLoOGHg&s",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
             "text": "Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "createdDateText": "35 минут назад"
+            "createdDateText": "35 минут назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Илья",
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "createdDateText": "минуту назад"
+            "createdDateText": "минуту назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg"
+            ]
         },
         {
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "createdDateText": "только что"
+            "createdDateText": "только что",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7Pt1J1tUjnOdLh0frkzREY5GcBSHLoOGHg&s",
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Олег",
             "last_name": "Николаев",
             "rating": 1,
             "text": "Ребёнок жалуется, что очень скользские. Пока шла до школы...",
-            "createdDateText": "15 минут назад"
+            "createdDateText": "15 минут назад",
+            "photo_urls": [
+                "https://static.ecco.ru/images/eshop/img/jpg/225x225/091504_01303.jpg?v=1",
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
             "text": "",
-            "createdDateText": "вчера в 12:39"
+            "createdDateText": "вчера в 12:39",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg"
+            ]
         },
 
 
@@ -108,49 +170,82 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "createdDateText": "1 час назад"
+            "createdDateText": "1 час назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": []
         },
         {
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
             "text": "Скользские ужасно.",
-            "createdDateText": "12 минут назад"
+            "createdDateText": "12 минут назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg"
+            ]
         },
         {
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
             "text": "Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "createdDateText": "35 минут назад"
+            "createdDateText": "35 минут назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7Pt1J1tUjnOdLh0frkzREY5GcBSHLoOGHg&s",
+                "https://static.ecco.ru/images/eshop/img/jpg/225x225/091504_01303.jpg?v=1",
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Илья",
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "createdDateText": "минуту назад"
+            "createdDateText": "минуту назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://static.ecco.ru/images/eshop/img/jpg/225x225/091504_01303.jpg?v=1",
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
         {
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "createdDateText": "только что"
+            "createdDateText": "только что",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7Pt1J1tUjnOdLh0frkzREY5GcBSHLoOGHg&s"
+            ]
         },
         {
             "first_name": "Олег",
             "last_name": "Николаев",
             "rating": 1,
             "text": "Ребёнок жалуется, что очень скользские. Пока шла до школы...",
-            "createdDateText": "15 минут назад"
+            "createdDateText": "15 минут назад",
+            "avatar_url": "https://cdn.freelance.ru/download/4601344/file.jpg",
+            "photo_urls": [
+                "https://room78.net/wp-content/uploads/2022/05/tk7h9dxj1fu.jpg"
+            ]
         },
         {
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
             "text": "",
-            "createdDateText": "вчера в 12:39"
+            "createdDateText": "вчера в 12:39",
+            "photo_urls": [
+                "https://vipcross.ru/upload/iblock/874/4mzpo6qsik31ca7cugl6zyhve82qrq0m.jpg",
+                "https://respect-shoes.ru/upload/medialibrary/ca3/8nbohhqrteyyy1m2i0k4ua8ypb1lsa6w.jpg"
+            ]
         },
     ]
 }

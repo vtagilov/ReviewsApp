@@ -55,20 +55,45 @@ extension ReviewsViewModel {
 
 private extension ReviewsViewModel {
 
-    /// Метод обработки получения отзывов.
     func gotReviews(_ result: ReviewsProvider.GetReviewsResult) {
-        do {
-            let data = try result.get()
-            let reviews = try decoder.decode(Reviews.self, from: data)
-            state.reviewItems += reviews.items.map(makeReviewItem)
-            state.reviewsCountItem.countText = reviews.count.reviewsCountString.attributed(font: .reviewCount, color: .reviewCount)
-            state.offset += state.limit
-            state.shouldLoad = state.offset < reviews.count
-            state.isAllItemsLoaded = !state.shouldLoad
-        } catch {
-            state.shouldLoad = true
+        Task { [weak self] in
+            guard let self else { return }
+            
+            do {
+                let data = try result.get()
+                let reviews = try self.decoder.decode(Reviews.self, from: data)
+                
+                let newItems = await withTaskGroup(of: (Int, ReviewItem).self) { group in
+                    for (index, item) in reviews.items.enumerated() {
+                        group.addTask {
+                            let reviewItem = await self.makeReviewItem(item)
+                            return (index, reviewItem)
+                        }
+                    }
+                    
+                    let unordered = await group.reduce(into: [(Int, ReviewItem)]()) { $0.append($1) }
+                    return unordered.sorted { $0.0 < $1.0 }.map { $0.1 }
+                }
+                
+                await MainActor.run {
+                    self.state.reviewItems += newItems
+                    self.state.reviewsCountItem.countText = reviews.count
+                        .reviewsCountString
+                        .attributed(font: .reviewCount, color: .reviewCount)
+                    self.state.offset += self.state.limit
+                    self.state.shouldLoad = self.state.offset < reviews.count
+                    self.state.isAllItemsLoaded = !self.state.shouldLoad
+                    self.onStateChange?(self.state)
+                }
+                
+            } catch {
+                await MainActor.run {
+                    debugPrint("Failed to process reviews:", error.localizedDescription)
+                    self.state.shouldLoad = true
+                    self.onStateChange?(self.state)
+                }
+            }
         }
-        onStateChange?(state)
     }
 
     /// Метод, вызываемый при нажатии на кнопку "Показать полностью...".
@@ -82,7 +107,43 @@ private extension ReviewsViewModel {
         state.reviewItems[index] = item
         onStateChange?(state)
     }
-
+    
+     func loadAvatarImage(from urlString: String?) async -> UIImage? {
+        guard let urlString = urlString, let url = URL(string: urlString) else {
+            return nil
+        }
+        return await downloadImage(from: url)
+    }
+    
+    func fetchImages(photoUrls: [String]) async -> [UIImage] {
+        let validUrls = photoUrls.compactMap { URL(string: $0) }
+        
+        return await withTaskGroup(of: UIImage?.self) { group in
+            for url in validUrls {
+                group.addTask { return await self.downloadImage(from: url) }
+            }
+            
+            return await group.reduce(into: []) { $0 += [$1].compactMap { $0 } }
+        }
+    }
+    
+    func downloadImage(from url: URL) async -> UIImage? {
+        let key = url.absoluteString
+        if let cachedImage = ImageCache.shared.image(forKey: key) {
+            return cachedImage
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            if let image = UIImage(data: data) {
+                ImageCache.shared.setImage(image, forKey: key)
+                return image
+            }
+        } catch {
+            debugPrint("Image download failed for \(url):", error.localizedDescription)
+        }
+        
+        return nil
+    }
 }
 
 // MARK: - Items
@@ -91,7 +152,10 @@ private extension ReviewsViewModel {
 
     typealias ReviewItem = ReviewCellConfig
 
-    func makeReviewItem(_ review: Review) -> ReviewItem {
+    func makeReviewItem(_ review: Review) async -> ReviewItem {
+        async let avatarImage = loadAvatarImage(from: review.avatar_url)
+        async let photos = fetchImages(photoUrls: review.photo_urls)
+        
         let nameText = "\(review.first_name) \(review.last_name)".attributed(font: .username)
         let reviewText = review.text.attributed(font: .text)
         let createdDateText = review.createdDateText.attributed(font: .created, color: .created)
@@ -99,11 +163,14 @@ private extension ReviewsViewModel {
             guard let sSelf = self else { return }
             sSelf.showMoreReview(with: UUID)
         }
+        
         let item = ReviewItem(
             nameText: nameText,
             rating: review.rating,
             reviewText: reviewText,
             createdDateText: createdDateText,
+            avatarImage: await avatarImage,
+            photos: await photos,
             onShowMoreTapped: onShowMoreTapped,
             ratingRenderer: ratingRenderer
         )
