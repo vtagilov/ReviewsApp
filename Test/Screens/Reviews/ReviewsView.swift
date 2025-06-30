@@ -4,6 +4,7 @@ final class ReviewsView: UIView {
 
     let tableView = UITableView()
     let refreshControl = UIRefreshControl()
+    let activityIndicator = UIActivityIndicatorView()
     
     var refreshControlAction: (() -> Void)?
 
@@ -31,6 +32,7 @@ private extension ReviewsView {
         backgroundColor = .systemBackground
         setupTableView()
         setupRefreshControl()
+        setupActivityIndicator()
     }
 
     func setupTableView() {
@@ -52,6 +54,16 @@ private extension ReviewsView {
                 }),
             for: .valueChanged
         )
+    }
+    
+    func setupActivityIndicator() {
+        addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+        activityIndicator.startAnimating()
     }
 
 }
